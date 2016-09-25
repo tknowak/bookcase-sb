@@ -1,1 +1,1 @@
-# bookcase-sb
+Simple tool for managing your private library
