@@ -1,12 +1,18 @@
-<!DOCTYPE html>
-<html>
-<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-<body>
+<!doctype html>
+    <html ng-app="myApp">
+        <head>
+            <title>Bookcase</title>
+                <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+                <script src="hello.js"></script>
+        </head>
 
-<div ng-app="">
-    <p>Name : <input type="text" ng-model="name"></p>
-    <h1>Hello {{name}}</h1>
-</div>
-
-</body>
-</html>
+        <body>
+            <div ng-controller="Hello">
+                <div ng-repeat="book in books">
+                    <p> The title is {{ book.title }} </p>
+                    <p> Numer of pages is {{ book.numberOfPages }} </p>
+                    <p> Book language is {{ book.language }} </p>
+                </div>
+            </div>
+        </body>
+    </html>
