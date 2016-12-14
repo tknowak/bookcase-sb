@@ -4,4 +4,4 @@ var app = angular.module("myApp", [])
              then(function(response) {
                  $scope.books = response.data;
              })
-     })
+     });
