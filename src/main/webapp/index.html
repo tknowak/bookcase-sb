@@ -4,14 +4,37 @@
             <title>Bookcase</title>
                 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
                 <script src="hello.js"></script>
+            <style>
+                table, th, td {
+                    border: 1px solid black;
+                    border-collapse: collapse;
+                }
+                th, td {
+                    padding: 5px;
+                }
+                th {
+                    text-align: left;
+                }
+            </style>
         </head>
 
         <body>
             <div ng-controller="Hello">
-                <div ng-repeat="book in books">
-                    <p> The title is {{ book.title }} </p>
-                    <p> Number of pages is {{ book.numberOfPages }} </p>
-                    <p> Book language is {{ book.language }} </p>
+                <div>
+                    <table style="width:50%">
+                        <tr>
+                            <th>Title</th>
+                            <th>Number of pages</th>
+                            <th>Language</th>
+                            <th>Buy now!</th>
+                        </tr>
+                        <tr ng-repeat="book in books">
+                            <td>{{book.title}}</td>
+                            <td>{{book.numberOfPages}}</td>
+                            <td>{{book.language}}</td>
+                            <td> </td>
+                        </tr>
+                    </table>
                 </div>
             </div>
         </body>
